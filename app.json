@@ -2,7 +2,7 @@
   "expo": {
     "name": "AH STUDY CHATBOT",
     "slug": "ai-chatbot-ahstudy",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -15,13 +15,15 @@
       "**/*"
     ],
     "plugins": [
-      "expo-build-properties",
-      {
-        "android": {
-          "compileSdkVersion": 34,
-          "targetSdkVersion": 34
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 34,
+            "targetSdkVersion": 34
+          }
         }
-      }
+      ]
     ],
     "ios": {
       "supportsTablet": true,
@@ -34,7 +36,7 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.quochuyph207.aichatbotahstudy",
-      "versionCode": 11
+      "versionCode": 12
     },
     "web": {
       "favicon": "./assets/favicon.png"
