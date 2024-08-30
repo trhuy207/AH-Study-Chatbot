@@ -21,7 +21,7 @@
   "submit": {
     "production": {
       "android": {
-        "serviceAccountKeyPath": "./serviceAccountKey/ah-study-chatbot-a7b0a7f4f409.json"
+        "serviceAccountKeyPath": "./serviceAccountKey/ah-study-chatbot-b026e-b2796a609b4a.json"
       }
     }
   }
