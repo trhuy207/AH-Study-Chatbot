@@ -63,7 +63,7 @@ export default function ChatScreen() {
           }
         }
         setMessages(previousMessages => GiftedChat.append(previousMessages, chatAIResp))
-        console.log(resp.data.choices[0].message.content)
+        // console.log(resp.data.choices[0].message.content)
       }
       else {
         setLoading(false)

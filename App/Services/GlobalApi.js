@@ -1,10 +1,26 @@
 import axios from "axios";
 
-const BASE_URL = 'https://openai-api-nodejs.onrender.com/app'
-// const BASE_URL = 'http://192.168.1.21:3001/app'   //Replace with System PC IP address
+async function getBardApi(msg) {
+    const url = "https://api.phattriennanglucso.com/index.json";
+    
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
 
-const getOpenAIApi=(msg)=>axios.get(BASE_URL+"?ques="+msg);
+        const apiUrl = await response.json().then(resp => {
+            return resp.baseUrl[0].URL
+        })
 
-export default{
-    getOpenAIApi
+        const BASE_URL = apiUrl
+
+        const getData = axios.get(BASE_URL+"?ques="+msg)
+
+        return getData
+    } catch (error) {
+        console.error(error.message);
+    }
 }
+
+export default {getBardApi}
