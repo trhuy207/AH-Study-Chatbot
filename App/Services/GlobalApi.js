@@ -1,6 +1,6 @@
 import axios from "axios";
 
-async function getBardApi(msg) {
+async function getOpenAIApi(msg) {
     const url = "https://api.phattriennanglucso.com/index.json";
     
     try {
@@ -23,4 +23,4 @@ async function getBardApi(msg) {
     }
 }
 
-export default {getBardApi}
+export default {getOpenAIApi}

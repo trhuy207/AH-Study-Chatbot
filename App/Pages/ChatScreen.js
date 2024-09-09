@@ -48,7 +48,7 @@ export default function ChatScreen() {
 
   const getBardResp = (msg) => {
     setLoading(true)
-    GlobalApi.getBardApi(msg).then(resp => {
+    GlobalApi.getOpenAIApi(msg).then(resp => {
       if (resp.data.choices[0].message.content) {
         setLoading(false)
         const chatAIResp = {
